@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php 
+    session_start(); 
+    require_once "./services/database.php";
+    isLoggedIn();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -75,7 +79,7 @@
 <?php 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-        require_once "./services/database.php";
+       
         $email = postData('email');
         $encryptedPass = password_hash(postData('password'), null);
         $query = "SELECT * FROM users WHERE email = '$email'";

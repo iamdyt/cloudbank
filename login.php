@@ -1,9 +1,14 @@
+<?php    
+    session_start(); 
+    require_once "./services/database.php"; 
+    isLoggedIn();
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
     <?php 
-        session_start();
+     
         require_once "./include/style.php";
         $errorMsg = "";
     ?>
@@ -36,7 +41,7 @@
         <div class="section mt-2 text-center">
             <h1>Log in</h1>
             <h4>Fill the form to log in</h4>
-            <h4 class="text-danger"><?=$_GET['error'] ?: '' ?></h4>
+
         </div>
         <div class="section mb-5 p-2">
 
@@ -96,8 +101,7 @@
 
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        
-        require_once "./services/database.php";
+    
         $email = postData('email');
         $password = postData('password');
     

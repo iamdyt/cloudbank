@@ -31,5 +31,13 @@
         if (!isset($_SESSION['email'])){
             header("Location:login.php");
         }
+      
+    }
+
+    function isLoggedIn(){
+        if (isset($_SESSION['email'])){
+            header("Location:dashboard.php");
+        }
+      
     }
 ?>

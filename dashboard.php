@@ -88,61 +88,22 @@
                         </a>
                     </div>
                     <div class="item">
-                        <a href="app-cards.html">
+                        <a href="#">
                             <div class="icon-wrapper bg-success">
-                                <ion-icon name="card-outline"></ion-icon>
+                                <ion-icon name="watch-outline"></ion-icon>
                             </div>
-                            <strong>Cards</strong>
+                            <?php if(date('H:i') != "18:36") { ?>
+                                <strong>Next sunrise 06:34AM</strong>
+                            <?php } else {  ?>
+                                <strong>Next sunset 06:36PM</strong>
+                            <?php } ?>
                         </a>
                     </div>
                 </div>
                 <!-- * Wallet Footer -->
             </div>
         </div>
-        <!-- Wallet Card -->
 
-        <!-- Deposit Action Sheet -->
-        <!-- <div class="modal fade action-sheet" id="depositActionSheet" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Add Balance</h5>
-                    </div>
-                    <div class="modal-body">
-                        <div class="action-sheet-content">
-                            <form>
-                                <div class="form-group basic">
-                                    <div class="input-wrapper">
-                                        <label class="label" for="account1">From</label>
-                                        <select class="form-control custom-select" id="account1">
-                                            <option value="0">Savings (*** 5019)</option>
-                                            <option value="1">Investment (*** 6212)</option>
-                                            <option value="2">Mortgage (*** 5021)</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group basic">
-                                    <label class="label">Enter Amount</label>
-                                    <div class="input-group mb-2">
-                                        <span class="input-group-text" id="basic-addona1">$</span>
-                                        <input type="text" class="form-control" placeholder="Enter an amount"
-                                            value="100">
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group basic">
-                                    <button type="button" class="btn btn-primary btn-block btn-lg"
-                                        data-bs-dismiss="modal">Deposit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- * Deposit Action Sheet -->
 
         <!-- Withdraw Action Sheet -->
         <div class="modal fade action-sheet" id="withdrawActionSheet" tabindex="-1" role="dialog">
@@ -292,27 +253,27 @@
                 <div class="col-3">
                     <div class="">
                         <div class="title">Region</div>
-                        <div class=" text-success"> <?=$weather->region?></div>
+                        <div class=" text-success"> <?=$weather->region ?: 'NA' ?></div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="">
                         <div class="title">Time</div>
-                        <div class=" text-danger"><?=$weather->currentConditions->dayhour?></div>
+                        <div class=" text-danger"><?=$weather->currentConditions->dayhour ?: 'NA' ?></div>
                     </div>
                 </div>
 
                 <div class="col-3">
                     <div class="">
                         <div class="title">Temp</div>
-                        <div class=" text-primary"><?=$weather->currentConditions->temp->c?> <sup>0</sup>C | <?=$weather->currentConditions->temp->f?> F | <?=$weather->currentConditions->humidity?></div>
+                        <div class=" text-primary"><?=$weather->currentConditions->temp->c ?: 'NA' ?> <sup>0</sup>C | <?=$weather->currentConditions->temp->f ?: 'NA' ?> F | <?=$weather->currentConditions->humidity ?: 'NA' ?> H</div>
                     </div>
                 </div>
 
                 <div class="col-3">
                     <div class="">
                         <div class="title">Comment</div>
-                        <div class=" text-secondary"><?=$weather->currentConditions->comment?>  </div>
+                        <div class=" text-secondary"><?=$weather->currentConditions->comment ?: 'NA' ?>  </div>
                     </div>
                 </div>
 

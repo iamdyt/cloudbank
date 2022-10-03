@@ -8,6 +8,7 @@ const Finapp = {
     PWA: {
         enable: true, // Enable or disable PWA
     },
+    
     //-------------------------------------------------------------------
     // Dark Mode Settings
     Dark_Mode: {
@@ -57,6 +58,7 @@ var loader =  document.getElementById('loader');
 // Service Workers
 //-----------------------------------------------------------------------
 if (Finapp.PWA.enable) {
+    
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('__service-worker.js')
             .then(reg => console.log('service worker registered'))
