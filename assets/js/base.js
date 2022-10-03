@@ -1,11 +1,3 @@
-//-----------------------------------------------------------------------
-// Version:        2.1
-// Template name:  Finapp - Wallet & Banking HTML Mobile Template
-// Item URL :      https://themeforest.net/item/finapp-wallet-banking-html-mobile-template/25738217
-// Author:         Bragher
-// Author URL :    https://themeforest.net/user/bragher
-//-----------------------------------------------------------------------
-
 
 //-----------------------------------------------------------------------
 // Template Settings

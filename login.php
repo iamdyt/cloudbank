@@ -112,10 +112,10 @@
     
                 echo "<script>window.location.href='dashboard.php'</script>";
             }
-            echo "<script>window.location.href='/login.php?error=Invalid Credentials'</script>";
+            echo "<script>window.location.href='login.php?error=Invalid Credentials'</script>";
         }
 
-        echo "<script>window.location.href='/login.php?error=Invalid Credentials'</script>";
+        echo "<script>window.location.href='login.php?error=Invalid Credentials'</script>";
 
         
     }
